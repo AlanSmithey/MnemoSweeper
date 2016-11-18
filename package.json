@@ -1,0 +1,13 @@
+{
+    "name"            : "MnemoSweeper",
+    "version"         : "1.0.0",
+    "author"          : "Aleksei Strukov <striker1982@list.ru>",
+    "devDependencies" : {
+        "gulp"                 : "latest",
+        "gulp-autoprefixer"    : "latest",
+        "gulp-concat-css"      : "latest",
+        "gulp-csso"            : "latest",
+        "gulp-htmlmin"         : "latest",
+        "gulp-sass"            : "latest"
+    }
+}

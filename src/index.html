@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>MnemoSweeper</title>
+    <meta name='description' content='HTML and CSS only game'>
+    <link rel='canonical' href='https://alansmithey.github.io/MnemoSweeper/'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no'>
+
+    <link rel='apple-touch-icon' href='apple-touch-icon.png'>
+    <link rel='icon' sizes='192x192' href='highres-icon.png'>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+    <meta name='apple-mobile-web-app-title' content='MnemoSweeper'>
+    <meta name='application-name' content='MnemoSweeper'>
+    <link rel='stylesheet' href='css/styles.min.css'>
+  </head>
+
+  <body ontouchstart=''>
+
+    <header>
+      <h1 aria-label="Mnemosweeper">&#7742;nemoSweeper</h1>
+      <p class="banner">HTML&CSS only Game</p>
+    </header>
+
+    <main>
+
+      <div class="wrapper">
+
+        <input type="checkbox" id="c1">
+        <label for="c1" class="empty"></label>
+
+        <input type="checkbox" id="c2">
+        <label for="c2" class="empty"></label>
+
+        <input type="checkbox" id="c3">
+        <label for="c3" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c4">
+        <label for="c4" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c5">
+        <label for="c5" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c6">
+        <label for="c6" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c7">
+        <label for="c7" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c8">
+        <label for="c8" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c9">
+        <label for="c9" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c10">
+        <label for="c10" class="empty"></label>
+
+        <input type="checkbox" id="c11">
+        <label for="c11" class="empty"></label>
+
+        <input type="checkbox" id="c12">
+        <label for="c12" class="empty"></label>
+
+        <input type="checkbox" id="c13">
+        <label for="c13" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c14">
+        <label for="c14" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c15">
+        <label for="c15" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c16">
+        <label for="c16" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c17">
+        <label for="c17" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c18">
+        <label for="c18" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c19">
+        <label for="c19" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c20">
+        <label for="c20" class="empty"></label>
+
+        <input type="checkbox" id="c21">
+        <label for="c21" class="empty"></label>
+
+        <input type="checkbox" id="c22">
+        <label for="c22" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c23">
+        <label for="c23" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c24">
+        <label for="c24" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c25">
+        <label for="c25" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c26">
+        <label for="c26" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c27">
+        <label for="c27" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c28">
+        <label for="c28" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c29">
+        <label for="c29" class="empty"></label>
+
+        <input type="checkbox" id="c30">
+        <label for="c30" class="empty"></label>
+
+        <input type="checkbox" id="c31">
+        <label for="c31" class="empty"></label>
+
+        <input type="checkbox" id="c32">
+        <label for="c32" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c33">
+        <label for="c33" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c34">
+        <label for="c34" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c35">
+        <label for="c35" class="empty"></label>
+
+        <input type="checkbox" id="c36">
+        <label for="c36" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c37">
+        <label for="c37" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c38">
+        <label for="c38" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c39">
+        <label for="c39" class="empty"></label>
+
+        <input type="checkbox" id="c40">
+        <label for="c40" class="empty"></label>
+
+        <input type="checkbox" id="c41">
+        <label for="c41" class="empty"></label>
+
+        <input type="checkbox" id="c42">
+        <label for="c42" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c43">
+        <label for="c43" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c44">
+        <label for="c44" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c45">
+        <label for="c45" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c46">
+        <label for="c46" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c47">
+        <label for="c47" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c48">
+        <label for="c48" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c49">
+        <label for="c49" class="empty"></label>
+
+        <input type="checkbox" id="c50">
+        <label for="c50" class="empty"></label>
+
+        <input type="checkbox" id="c51">
+        <label for="c51" class="empty"></label>
+
+        <input type="checkbox" id="c52">
+        <label for="c52" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c53">
+        <label for="c53" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c54">
+        <label for="c54" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c55">
+        <label for="c55" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c56">
+        <label for="c56" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c57">
+        <label for="c57" class="number" data-value="3"></label>
+
+        <input type="checkbox" id="c58">
+        <label for="c58" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c59">
+        <label for="c59" class="empty"></label>
+
+        <input type="checkbox" id="c60">
+        <label for="c60" class="empty"></label>
+
+        <input type="checkbox" id="c61">
+        <label for="c61" class="empty"></label>
+
+        <input type="checkbox" id="c62">
+        <label for="c62" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c63">
+        <label for="c63" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c64">
+        <label for="c64" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c65">
+        <label for="c65" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c66">
+        <label for="c66" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c67">
+        <label for="c67" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c68">
+        <label for="c68" class="number" data-value="3"></label>
+
+        <input type="checkbox" id="c69">
+        <label for="c69" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c70">
+        <label for="c70" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c71">
+        <label for="c71" class="empty"></label>
+
+        <input type="checkbox" id="c72">
+        <label for="c72" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c73">
+        <label for="c73" class="number" data-value="3"></label>
+
+        <input type="checkbox" id="c74">
+        <label for="c74" class="number" data-value="3"></label>
+
+        <input type="checkbox" id="c75">
+        <label for="c75" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c76">
+        <label for="c76" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c77">
+        <label for="c77" class="number" data-value="3"></label>
+
+        <input type="checkbox" id="c78">
+        <label for="c78" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c79">
+        <label for="c79" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c80">
+        <label for="c80" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c81">
+        <label for="c81" class="empty"></label>
+
+        <input type="checkbox" id="c82">
+        <label for="c82" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c83">
+        <label for="c83" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c84">
+        <label for="c84" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c85">
+        <label for="c85" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c86">
+        <label for="c86" class="bomb" data-value="&#x1F4A3"></label>
+
+        <input type="checkbox" id="c87">
+        <label for="c87" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c88">
+        <label for="c88" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c89">
+        <label for="c89" class="number" data-value="2"></label>
+
+        <input type="checkbox" id="c90">
+        <label for="c90" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c91">
+        <label for="c91" class="empty"></label>
+
+        <input type="checkbox" id="c92">
+        <label for="c92" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c93">
+        <label for="c93" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c94">
+        <label for="c94" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c95">
+        <label for="c95" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c96">
+        <label for="c96" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c97">
+        <label for="c97" class="number" data-value="1"></label>
+
+        <input type="checkbox" id="c98">
+        <label for="c98" class="empty"></label>
+
+        <input type="checkbox" id="c99">
+        <label for="c99" class="empty"></label>
+
+        <input type="checkbox" id="c100">
+        <label for="c100" class="empty"></label>
+
+        <div class="popup message gameover">
+          <strong>Game Over</strong>
+        </div>
+
+        <div class="popup message win">
+          <strong>You Win</strong>
+        </div>
+
+        <div class="popup button retry">
+          <a href="#">Retry</a>
+        </div>
+
+        <div class="popup button next">
+          <a href="#">Next Level</a>
+        </div>
+
+      </div>
+
+      <div class="counter">
+        <span>Your score: </span>
+        <b></b>
+        <abbr title="points"> pts.</abbr>
+      </div>
+
+    </main>
+    <footer>
+      <a href="#" rel='noreferrer noopener external' target='_blank' aria-label='Find more about project (link opens in new window)' class="about">About project:
+      <svg role="presentation" height="28" viewBox="0 0 16 16" width="28">
+        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+      </svg>
+    </a>
+    </footer>
+  </body>
+
+</html>
