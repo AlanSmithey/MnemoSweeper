@@ -46,7 +46,7 @@ gulp.task('css', ['sass'], function() {
                .pipe(gulp.dest('dist/css/'));
 });
 
-// minify and inject html partials
+// minify html
 gulp.task('html', function() {
     'use strict';
     return gulp.src('src/index.html')
@@ -55,6 +55,4 @@ gulp.task('html', function() {
 });
 
 // build task
-gulp.task('build', ['css',
-                    'scripts',
-                    'html']);
+gulp.task('build', ['css','html']);
