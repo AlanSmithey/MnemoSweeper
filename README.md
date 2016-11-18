@@ -1,2 +1,2 @@
 # MnemoSweeper
-The simple CSS game like Mine Sweeper
+Simple game inspired by classic title "MineSweeper". Only HTML and CSS was used to create this thing.
