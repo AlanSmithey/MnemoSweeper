@@ -12,49 +12,97 @@
     }
 }
 
-@keyframes bg {
-    0% {
-    background-color            : rgba(241,248,233,0);
-    }
+/*-----------------------*
+  #CELLS
+ *-----------------------*/
 
-    16% {
-    background-color            : rgba(241,248,233,1);
-    }
+// Chrome has strange behavior of absolute positioned elements inside flex container
 
-    32% {
-    background-color            : rgba(241,248,233,0);
-    }
-
-    33% {
-    background-color            : rgba(255,248,225,0);
-    }
-
-    50% {
-    background-color            : rgba(255,248,225,1);
-    }
-
-    66% {
-    background-color            : rgba(255,248,225,0);
-    }
-
-    67% {
-    background-color            : rgba(232,234,246,1);
-    }
-
-    83% {
-    background-color            : rgba(232,234,246,0);
-    }
-
-    100% {
-    background-color            : rgba(232,234,246,1);
-    }
+.flag[for^='f0'] {
+    top: 0;
 }
 
+.flag[for^='f1'] {
+    top: 10%;
+}
+
+.flag[for^='f2'] {
+    top: 20%;
+}
+
+.flag[for^='f3'] {
+    top: 30%;
+}
+
+.flag[for^='f4'] {
+    top: 40%;
+}
+
+.flag[for^='f5'] {
+    top: 50%;
+}
+
+.flag[for^='f6'] {
+    top: 60%;
+}
+
+.flag[for^='f7'] {
+    top: 70%;
+}
+
+.flag[for^='f8'] {
+    top: 80%;
+}
+
+.flag[for^='f9'] {
+    top: 90%;
+}
+
+.flag[for$='0'] {
+    left: 0;
+}
+
+.flag[for$='1'] {
+    left: 10%;
+}
+
+.flag[for$='2'] {
+    left: 20%;
+}
+
+.flag[for$='3'] {
+    left: 30%;
+}
+
+.flag[for$='4'] {
+    left: 40%;
+}
+
+.flag[for$='5'] {
+    left: 50%;
+}
+
+.flag[for$='6'] {
+    left: 60%;
+}
+
+.flag[for$='7'] {
+    left: 70%;
+}
+
+.flag[for$='8'] {
+    left: 80%;
+}
+
+.flag[for$='9'] {
+    left: 90%;
+}
 /*-----------------------*
   #STYLES
  *-----------------------*/
 
 html {
+    background                  : #e0f2f1;
     font                        : 400 20px/1.5 sans-serif;
     -ms-text-size-adjust        : 100%;
     -webkit-text-size-adjust    : 100%;
@@ -63,41 +111,34 @@ html {
 }
 
 body {
-    margin                      : 0;
+    margin                      : 0 .5rem;
     min-width                   : 320px;
-    text-align                  : center;
     color                       : #263238;
     counter-reset               : score;
-    animation                   : fade_in 1s backwards, bg 300s infinite;
+    animation                   : fade_in 1s backwards;
     user-select                 : none;
 }
 
-main {
-    padding                     : 0 .5rem;
-}
-
-main,
+body,
 label,
-.counter {
+.counter,
+.toggler {
     box-sizing                  : border-box;
 }
 
 label,
 a {
     color                       : inherit;
+    outline                     : 0;
     text-decoration             : none;
-    transition                  : background-color .15s ease;
-    -webkit-tap-highlight-color : transparent;
+    transition                  : background-color .15s ease, transform .2s ease;
     touch-action                : manipulation;
-}
-
-svg {
-    display                     : inline-block;
-    vertical-align              : bottom;
+    -webkit-tap-highlight-color : transparent;
 }
 
 h1 {
-    margin                      : 1.5rem 0;
+    margin                      : 1rem 0;
+    font-size                   : 1.8rem;
     font-weight                 : 700;
 }
 
@@ -108,11 +149,13 @@ h1::first-letter {
 
 .banner {
     position                    : absolute;
-    top                         : -13px;
-    right                       : -4px;
+    top                         : -14px;
+    left                        : 170px;
     font-family                 : monospace;
-    font-size                   : 13px;
-    text-decoration             : overline;
+    font-size                   : 12px;
+    text-decoration             : underline;
+    word-spacing                : -4px;
+    letter-spacing              : 1px;
 }
 
 .banner::first-letter {
@@ -129,20 +172,82 @@ footer {
     margin                      : 0 auto;
 }
 
-header {
-    max-width                   : 320px
-}
-
 .wrapper,
-label {
+.field,
+.flag {
     border                      : 1px solid currentColor;
 }
 
 .wrapper {
-    display                     : flex;
-    flex-wrap                   : wrap;
-    margin-top                  : 2rem;
+    margin-top                  : 3rem;
     box-shadow                  : 0 2px 6px #546e7a;
+}
+
+.wrapper::after {
+    content                     : '';
+    display                     : block;
+    clear                       : both;
+}
+
+.trigger,
+.toggler {
+    position                    : absolute;
+    top                         : -3rem;
+    right                       : 0;
+    width                       : 2.5rem;
+    height                      : 2.5rem;
+    border-radius               : 50%;
+}
+
+.trigger {
+    z-index                     : 20;
+}
+
+.toggler {
+    border                      : 2px solid currentColor;
+    transition                  : transform .4s ease, background-color .15s ease;
+    transform-style             : preserve-3d;
+    will-change                 : transform;
+    box-shadow                  : 0 2px 6px #546e7a;
+}
+
+.front,
+.back {
+    position                    : absolute;
+    top                         : 0;
+    left                        : 0;
+    width                       : 100%;
+    height                      : 100%;
+    border-radius               : 50%;
+    backface-visibility         : hidden;
+}
+
+.front {
+    z-index                     : 0;
+}
+
+.back {
+    transform                   : rotateY(180deg);
+}
+
+.front::before,
+.back::before {
+    margin-left                 : 2px;
+}
+
+input[id='t']:checked ~ .toggler {
+    transform                   : rotateY(180deg);
+}
+
+input:checked + .number::before,
+input:checked + .bomb::before,
+input:checked + .flag::before,
+.front::before,
+.back::before {
+    position                    : absolute;
+    top                         : 50%;
+    left                        : 50%;
+    transform                   : translate(-50%, -50%);
 }
 
 input,
@@ -156,14 +261,31 @@ input,
     display                     : flex;
 }
 
-label {
+.field {
     position                    : relative;
+    float                       : left;
     width                       : 10%;
     padding-bottom              : 10%;
+}
+
+.field,
+.front {
     background                  : #bdbdbd;
 }
 
-input:checked + label:not(.bomb) {
+.flag,
+.back {
+    background                  : #c8e6c9;
+}
+
+.flag {
+    position                    : absolute;
+    width                       : 10%;
+    height                      : 10%;
+    z-index                     : -10;
+}
+
+input:checked + .field:not(.bomb) {
     border-color                : #546e7a;
     pointer-events              : none;
     counter-increment           : score;
@@ -185,10 +307,15 @@ input:checked + .bomb {
 input:checked + .number::before,
 input:checked + .bomb::before {
     content                     : attr(data-value);
-    position                    : absolute;
-    top                         : 50%;
-    left                        : 50%;
-    transform                   : translate(-50%, -50%);
+}
+
+input:checked + .flag::before,
+.back::before {
+    content                     : '\1F6A9';
+}
+
+.front::before {
+    content                     : '\1F4A3';
 }
 
 input:checked + .bomb ~ .gameover,
@@ -196,9 +323,14 @@ input:checked + .bomb ~ .retry {
     display                     : flex;
 }
 
-input:not(:checked) + label:not(.bomb) ~ .win,
-input:not(:checked) + label:not(.bomb) ~ .next {
+input:not(:checked) + .field:not(.bomb) ~ .win,
+input:not(:checked) + .field:not(.bomb) ~ .next {
     display                     : none;
+}
+
+input[id='t']:checked ~ input:not(:checked) + .field + input + .flag,
+input:not(:checked) + .field + input:checked + .flag {
+    z-index                     : 10;
 }
 
 .counter,
@@ -209,7 +341,6 @@ input:not(:checked) + label:not(.bomb) ~ .next {
 
 .counter {
     padding-top                 : 1rem;
-    text-align                  : left;
 }
 
 .counter > b::after {
@@ -219,8 +350,9 @@ input:not(:checked) + label:not(.bomb) ~ .next {
 
 .about {
     position                    : absolute;
-    top                         : -1.3rem;
-    right                       : .5rem;
+    top                         : -1.35rem;
+    right                       : 0;
+    will-change                 : transform;
 }
 
 .popup {
@@ -230,9 +362,8 @@ input:not(:checked) + label:not(.bomb) ~ .next {
 }
 
 .message {
-    top                         : -2.8rem;
-    justify-content             : center;
-    font-size                   : 1.8rem;
+    top                         : -3rem;
+    font-size                   : 1.5rem;
 }
 
 .gameover {
@@ -244,8 +375,9 @@ input:not(:checked) + label:not(.bomb) ~ .next {
 }
 
 .button {
-    top                         : 0;
+    top                         : -4rem;
     bottom                      : 0;
+    z-index                     : 20;
 }
 
 .button > a {
@@ -262,16 +394,28 @@ input:not(:checked) + label:not(.bomb) ~ .next {
 
 @media (min-device-width: 1280px) {
     a:hover {
-        text-decoration         : underline;
+        transform               : scale(1.5);
     }
     
-    label:hover {
+    input[id='t']:not(:checked) + .trigger:hover + .toggler > .front, {
         background              : #9e9e9e;
+    }
+
+    input[id='t']:checked + .trigger:hover + .toggler > .back,
+    .flag:hover {
+        background              : #a5d6a7;
     }
 }
 
 a:focus,
 a:active {
-    text-decoration             : underline;
-    outline                     : 0;
+    transform                   : scale(1.5);
+}
+
+input[id='t']:not(:checked) + .trigger:active + .toggler > .front {
+    background                  : #9e9e9e;
+}
+
+input[id='t']:checked + .trigger:active + .toggler > .back {
+    background                  : #a5d6a7;
 }
