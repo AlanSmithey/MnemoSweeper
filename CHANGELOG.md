@@ -5,3 +5,4 @@
 * Firefix flexbox problem with padding in percents solved by float layout.
 * Firefox problem with z-index in 3d animations solved.
 * Removed unnecessary background animation what can leads to browser performance problems on weak devices.
+* Minor design changes.
