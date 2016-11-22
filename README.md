@@ -6,4 +6,4 @@ Simple game inspired by classic title "MineSweeper". Only HTML and CSS was used 
 *in progress*...
 
 #### Browser Support:
-Last two versions of each browser.
+Last two versions of all major browsers.
