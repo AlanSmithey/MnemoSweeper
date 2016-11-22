@@ -7,6 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat_css = require('gulp-concat-css');
 var csso = require('gulp-csso');
 var htmlmin = require('gulp-htmlmin');
+var pages = require('gulp-gh-pages');
 
 // other variables
 var sass_option = {
@@ -52,6 +53,12 @@ gulp.task('html', function() {
     return gulp.src('src/index.html')
                .pipe(htmlmin(htmlmin_option))
                .pipe(gulp.dest('dist'));
+});
+
+// deploy task
+gulp.task('deploy', function() {
+  return gulp.src('dist/**/*')
+    .pipe(pages());
 });
 
 // build task

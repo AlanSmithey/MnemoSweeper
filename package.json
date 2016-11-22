@@ -1,14 +1,15 @@
 {
-    "name"            : "MnemoSweeper",
-    "version"         : "1.1.0",
-    "author"          : "Aleksei Strukov <striker1982@list.ru>",
-    "license"         : "MIT",
-    "devDependencies" : {
-        "gulp"                 : "latest",
-        "gulp-autoprefixer"    : "latest",
-        "gulp-concat-css"      : "latest",
-        "gulp-csso"            : "latest",
-        "gulp-htmlmin"         : "latest",
-        "gulp-sass"            : "latest"
-    }
+  "name": "MnemoSweeper",
+  "version": "1.1.1",
+  "author": "Aleksei Strukov <striker1982@list.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat-css": "latest",
+    "gulp-csso": "latest",
+    "gulp-gh-pages": "latest",
+    "gulp-htmlmin": "latest",
+    "gulp-sass": "latest"
+  }
 }
