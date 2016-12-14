@@ -1,9 +1,7 @@
 # MnemoSweeper
 Simple game inspired by classic title "MineSweeper". Only HTML and CSS was used to create this product.
 
-### Game Rules:
+DEMO page: https://alansmithey.github.io/mnemosweeper/
 
-*in progress*...
-
-#### Browser Support:
+## Browser Support:
 Last two versions of all major browsers.
